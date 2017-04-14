@@ -9,7 +9,5 @@ Vagrant.configure("2") do |config|
 		reposerver.vm.network :private_network, ip: "192.168.7.7"
 		reposerver.vm.hostname = "reposerver"
     reposerver.vm.provision "shell", path: "setup.sh"
-		#config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-		#reposerver.vm.provision :shell, :path=> 'setup.sh'
 	end
 end
